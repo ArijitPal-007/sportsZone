@@ -1,0 +1,97 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Image Upload Preview */
+.add-image {
+    width: 100px;  /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    object-fit: cover; /* Prevents distortion */
+    border: 2px dashed #adb5bd; /* Dashed border */
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* Input, Textarea, Select, and Button Styles */
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="file"] {
+    background: #fff;
+    border: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #ff758c;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.6);
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+select {
+    cursor: pointer;
+    background: #f3f4f6;
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff5f6d, #ff758c);
+    transform: translateY(-2px);
+}
+
+/* File Upload Button Styling */
+input[type="file"]::-webkit-file-upload-button {
+    background: #ff758c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background: #ff5f6d;
+}

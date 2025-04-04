@@ -1,0 +1,75 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .nav-links li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Dropdown Styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 12px;
+  }
+  
+  .dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Sign Up Button */
+  .signup-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-btn:hover {
+    background-color: #e67e22;
+  }
+  
