@@ -36,7 +36,7 @@ const login = async (req,res) => {
       res.json({ msg: "user not find" });
     }
     const token = createToken(user._id);
-    res.json({ msg: "login successfully", token: token });
+    res.json({ msg: "login successfully", user, token: token });
   } catch (error) {
     res.json({ msg: "error in login", error });
     console.log("error in login", login);

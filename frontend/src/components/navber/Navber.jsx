@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navber.css";
+import { useAuth } from "../../context/AuthContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout } = useAuth();
+
+  // console.log('user data: ', user)
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <nav className="navbar">
@@ -27,8 +35,23 @@ const Navbar = () => {
             </ul>
           )}
         </li>
+        <li>
+          {user ? (
+            <Link to={`/favourites/${user._id}`}>Favourites</Link>
+          ) : (
+            <Link to="/register">Favourites</Link>
+          )}
+        </li>
       </ul>
-      <Link to="/register" className="signup-btn">Sign Up</Link>
+      {user ? (
+        <div className="user-profile">
+         <span className="user-letter" onClick={handleLogout}>
+         {(user?.name || user?.email || "U")[0].toUpperCase()}
+         </span>
+        </div>
+      ) : (
+        <Link to="/register" className="signup-btn">Sign Up</Link>
+      )}
     </nav>
   );
 };

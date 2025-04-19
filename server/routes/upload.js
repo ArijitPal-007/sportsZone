@@ -17,6 +17,4 @@ uploadRoute.post("/upload",upload.single("image"),uploadHandler)
 uploadRoute.get("/getData",getData)
 
 
-
-
 export default uploadRoute
